@@ -1,0 +1,204 @@
+@use 'header';
+@use 'footer';
+@use 'timer';
+
+@font-face {
+    font-family: 'riotsans';
+    src: url(../fonts/FontsFree-Net-Tungsten-Bold.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.back {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../images/dd544c5c423909d0cb40c64def103bcbf6dd312c-1920x1080.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 50vw;
+    z-index: 0;
+}
+
+// Estilos do conteúdo principal
+.content {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    padding: 60px 0;
+    min-height: 100vh;
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .event-info {
+        text-align: center;
+        margin-bottom: 60px;
+        
+        h2 {
+            font-family: 'riotsans';
+            color: #FFD700;
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        p {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+    }
+
+    .highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            border-radius: 15px;
+            border: 2px solid #FFD700;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+            }
+            
+            h3 {
+                font-family: 'riotsans';
+                color: #FFD700;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            
+            p {
+                font-family: Arial, sans-serif;
+                color: #fff;
+                font-size: 16px;
+                margin: 0;
+            }
+        }
+    }
+
+    .location, .menu-preview {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        
+        h2 {
+            font-family: 'riotsans';
+            color: #8B4513;
+            font-size: 36px;
+            margin-bottom: 25px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        p {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+            
+            strong {
+                color: #8B4513;
+            }
+        }
+    }
+
+    .menu-items {
+        display: grid;
+        gap: 20px;
+        
+        .menu-item {
+            padding: 25px;
+            background: #FFF8DC;
+            border-radius: 10px;
+            border-left: 4px solid #FFD700;
+            position: relative;
+            
+            h4 {
+                color: #8B4513;
+                font-size: 22px;
+                margin-bottom: 10px;
+                font-family: 'riotsans';
+            }
+            
+            p {
+                color: #666;
+                margin: 0 0 15px 0;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            .price {
+                font-family: 'riotsans';
+                color: #8B4513;
+                font-size: 20px;
+                font-weight: bold;
+                position: absolute;
+                right: 25px;
+                top: 25px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px 0;
+        
+        .event-info h2 {
+            font-size: 36px;
+        }
+        
+        .location, .menu-preview {
+            padding: 25px;
+            margin-bottom: 30px;
+            
+            h2 {
+                font-size: 28px;
+            }
+        }
+        
+        .highlights {
+            grid-template-columns: 1fr;
+        }
+        
+        .menu-item .price {
+            position: static;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .event-info h2 {
+            font-size: 28px;
+        }
+        
+        .location, .menu-preview {
+            padding: 20px;
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
