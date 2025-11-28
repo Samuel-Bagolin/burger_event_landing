@@ -1,0 +1,53 @@
+.body {
+    margin-top: 35%;
+    margin-left: 4%;
+    
+    &__timer{
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 125px;
+        width: 525px;
+        background: linear-gradient(135deg, rgba(139, 69, 19, 0.9) 0%, rgba(160, 82, 45, 0.9) 100%);
+        border: 3px solid #FFD700;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        
+        &__text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'riotsans';
+            font-size: 42px;
+            color: #FFD700;
+            text-align: center;
+            
+            &__span {
+                font-size: 36px;
+                color: #ffffff;
+                margin-top: 10px;
+                font-family: 'riotsans';
+            }
+        }
+    }
+    
+    @media (max-width:640px) {
+        margin-top: 50%;
+        margin-left: 5%;
+        
+        &__timer {
+            width: 90%;
+            max-width: 300px;
+            height: 80px;
+            
+            &__text {
+                font-size: 18px;
+                
+                &__span {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
