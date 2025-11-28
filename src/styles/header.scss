@@ -1,0 +1,130 @@
+.header {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+    padding: 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 3px solid #FFD700;
+    
+    &__img {
+        width: 64px;
+        margin-left: 32px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    &__title {
+        font-family: 'riotsans';
+        color: #FFD700;
+        font-size: 48px;
+        margin-right: 4%;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+    }
+
+    &__btn-header {
+        margin-right: 32px;
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            &--item {
+                position: relative;
+                cursor: pointer;
+                font-family: 'riotsans';
+                font-size: 48px;
+                list-style-type: none;
+                color: #FFD700;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    color: #ffffff;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 640px) {
+        &__img {
+            max-width: 32px;
+            width: 100%;
+            margin-left: 16px;
+        }
+        &__title {
+            font-family: 'riotsans';
+            color: #FFD700;
+            font-size: 24px;
+            margin-right: 6%;
+        }
+
+        &__btn-header {
+            display: none;
+        }
+    }
+}
+
+.info {
+    background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+    width: 200px;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    
+    &__list {
+        color: #fff;
+        width: 100%;
+        &--item {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            
+            &:last-child {
+                border-bottom: none;
+            }
+            
+            &:hover {
+                color: #FFD700;
+                background: rgba(255,255,255,0.1);
+                padding-left: 25px;
+            }
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        left: 85%;
+    }
+    
+    display: none;
+
+    @media (max-width: 640px) {
+        display: flex;
+        width: 100%;
+        left: 0;
+        position: relative;
+        font-size: 20px;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.show-off {
+    display: flex;
+}
